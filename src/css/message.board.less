@@ -2,10 +2,56 @@ body{
 	margin: 0;
 	padding: 0;
 }
+@font-face{
+	font-family: "caoshu";
+	src:url('../font/maozhuxi.ttf');
+}
 .messageBoard{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background: url("../images/bg4.jpg") no-repeat;
 	background-size: cover;
+	.body{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -530px;
+		width: 1060px;
+		height: 100%;
+		opacity: 0.7;
+		h1{
+			font-family: "caoshu";
+		}
+		button{
+			border: none;
+			outline: none;
+			margin-left:50px; 
+			padding: 5px;
+			border-radius: 5px;
+			background: #108EE9;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}
+.editor{
+	margin: 10px;
+	>div{
+		float: left;
+	}
+	.ed_html{
+		margin-left: 5px;
+	}
+}
+.editor:after{
+	display: table;
+	content: '';
+	clear: both;
+}
+@media (max-width: 1060px){
+	.messageBoard .body{
+		left: 0;
+		margin-left: 0px;
+	}
 }

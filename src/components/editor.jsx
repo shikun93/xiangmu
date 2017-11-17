@@ -7,6 +7,7 @@ class Editor extends Component {
   } 
 
   render() {
+    let t = this;
     return (
       <div>
         <script type="text/plain" id="myEditor" style={{width:"1000px",height:"500px"}}>

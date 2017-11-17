@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import style from '../css/message.board.less';
 import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from '../store/actions';
 import Editor from '../components/editor';
-import Form from '../components/form';
+import FormItem from '../components/form';
 
 class MessageBoard extends Component {
 
@@ -73,8 +73,8 @@ class MessageBoard extends Component {
           if(document.body.clientWidth-1220>20){
             // x.width=(document.body.clientWidth-1220)/2;
             // x.height=742;x.style.width=x.width+"px";
-            e.width=(document.body.clientWidth-1220)/2;
-            e.height=742;e.style.width=x.width+"px"
+            // e.width=(document.body.clientWidth-1220)/2;
+            // e.height=742;e.style.width=x.width+"px"
           }
         }
         window.requestAnimFrame=(function(){
@@ -88,13 +88,51 @@ class MessageBoard extends Component {
   
   }	
 
+  aa(){  
+    let t = this;
+    console.log($(t.refs.form).serializeArray());
+
+  }
+
   render() {
     let t = this;
     const { dispatch,title,singer,lryic,m4a,n,lists } = this.props
-    
+    let obj = {
+      label:"标题",
+      className:'aa',
+      name:'aa',
+      placeholder:'aaaaa',
+      value:'',
+      onChange:t.aa.bind(t)
+    };
+    let obj1 = {
+      label:"描述",
+      className:'aa',
+      name:'bb',
+      placeholder:'aaaaa',
+      value:'',
+      onChange:t.aa.bind(t)
+    };
+
+    let obj2 = {
+      className:'aa',
+      name:'bb',
+      onClick:t.aa.bind(t)
+    };
+
     return (
       <div className={style.messageBoard}>
         <canvas id="snowFallTop" className="snowFall snowFallTop" width="1220" height="720" style={{"left":"-60px"}}></canvas>      
+        <div className={style.body}>
+          <h1>写博客</h1>
+          <hr />
+          <form ref="form">
+            <FormItem type="input" data={obj} />
+            <FormItem type="textarea" data={obj1} />
+            <div className={style.editor}><div><label style={{color: "#666"}}>编辑</label></div><div className={style.ed_html}><Editor /></div></div>
+            <FormItem type="button" data={obj2}>发表文章</FormItem>
+          </form>
+        </div>
       </div>
     )
   }

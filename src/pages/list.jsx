@@ -241,7 +241,84 @@ class List extends Component {
     
     return (
       <div className={style.list}>
-        <canvas id="stars"></canvas>
+          <canvas id="stars"></canvas>
+          <div className={style.body}>
+            <h1>文章列表</h1>
+            <hr />
+             <ul className={style.main}>
+            <li>
+              <div className={style.time}>
+                  <p>2017</p>
+                  <p>11-13</p>
+              </div>
+              <div className={style.descrition}>
+                
+                <p></p>
+                <div className={style.maindes}>
+                  这是一篇文章
+                </div>
+              </div>
+              <p></p>
+              
+            </li>
+            <li>
+              <div className={style.time}>
+                  <p>2017</p>
+                  <p>11-13</p>
+              </div>
+              <div className={style.descrition}>
+                
+                <p></p>
+                <div className={style.maindes}>
+                  这是一篇文章
+                </div>
+              </div>
+              <p></p>
+            </li>
+            <li>
+              <div className={style.time}>
+                <p>2017</p>
+                <p>11-13</p>
+              </div>
+              <div className={style.descrition}>
+                
+                <p></p>
+                <div className={style.maindes}>
+                  这是一篇文章
+                </div>
+              </div>
+              <p></p>
+            </li>
+            <li>
+              <div className={style.time}>
+                  <p>2017</p>
+                  <p>11-13</p>
+              </div>
+              <div className={style.descrition}>
+                
+                <p></p>
+                <div className={style.maindes}>
+                  这是一篇文章
+                </div>
+              </div>
+              <p></p>
+            </li>
+            <li>
+              <div className={style.time}>
+                <p>2017</p>
+                <p>11-13</p>
+              </div>
+              <div className={style.descrition}>
+                <p></p>
+                <div className={style.maindes}>
+                  这是一篇文章
+                </div>
+              </div>
+              <p></p>
+              
+            </li>
+          </ul>
+          </div>  
       </div>
     )
   } 
