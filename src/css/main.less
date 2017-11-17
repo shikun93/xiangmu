@@ -1,0 +1,177 @@
+ul,li,p{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.main{
+	.ul{
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -84px;
+		z-index: 999;
+		li{
+			float: left;
+			margin: 10px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			a{
+				display: block;
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+.bor{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.appear{
+
+}
+.animate{
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.left-enter {
+  transform:translate(100%);
+}
+
+.left-enter-active {
+  transform:translate(0px);
+  transition:transform .5s;
+
+}
+
+.left-leave {
+  transform:translate(0px);
+  opacity: 1;
+}
+
+.left-leave-active {
+  transform:translate(-100%);
+  opacity:0.01;
+  transition:all .5s;
+}
+.right-enter {
+  transform:translate(-100%);
+}
+
+.right-enter-active {
+  transform:translate(0px);
+  transition:transform .5s;
+
+}
+
+.right-leave {
+  transform:translate(0px);
+  opacity: 1;
+}
+
+.right-leave-active {
+  transform:translate(100%);
+  opacity:0.01;
+  transition:all .5s;
+}
+.top-enter {
+  transform:translate(0,100%);
+}
+
+.top-enter-active {
+  transform:translate(0px);
+  transition:transform .5s;
+
+}
+
+.top-leave {
+  transform:translate(0px);
+  opacity: 1;
+}
+
+.top-leave-active {
+  transform:translate(0,-100%);
+  opacity:0.01;
+  transition:all .5s;
+}
+.bottom-enter {
+  transform:translate(0,-100%);
+}
+
+.bottom-enter-active {
+  transform:translate(0px);
+  transition:transform .5s;
+
+}
+
+.bottom-leave {
+  transform:translate(0px);
+  opacity: 1;
+}
+
+.bottom-leave-active {
+  transform:translate(0,100%);
+  opacity:0.01;
+  transition:all .5s;
+}
+.muisc{
+		position: absolute;
+		width: 160px;
+		height: 31px;
+		padding-right: 30px;
+		top: 30px;
+		right: 100px;
+		background: #fff;
+		opacity: 0.7;
+		z-index: 99;
+		color: #8019C1;
+		cursor: pointer;
+		>div{
+			padding: 5px;
+			overflow:hidden;
+			i{
+				background: #fff;
+				cursor: pointer;
+				padding: 5px;
+				position: absolute;
+				right: 0;
+				top: 2px;
+			}
+		}
+		.muiscList{
+			position: absolute;
+			top: 31px;
+			left: 0;
+			z-index: 99;
+			background: #fff;
+			opacity: 0.7;
+			padding: 5px;
+			display: none;
+			li{
+				padding-right: 30px;
+				line-height: 30px;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+	}
+	.muisc:hover .muiscList{
+		display: block;
+	}
+	@font-face {font-family: "iconfont";
+          src: url('../font/iconfont.eot'); /* IE9*/
+          src: url('../font/iconfont.eot#iefix') format('embedded-opentype'),
+          url('../font/iconfont.woff') format('woff'), 
+          url('../font/iconfont.ttf') format('truetype');
+        }
+
+        .iconfont {
+          font-family:"iconfont" !important;
+          font-size:16px;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }

@@ -1,0 +1,138 @@
+@font-face{
+	font-family: "caoshu";
+	src:url('../font/NIS-KOI-83pv-RKSJ-H-02.ttf');
+}
+.home{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("../images/bg1.jpg") no-repeat;
+	background-size: cover;
+	
+	.plot{
+		width: 1300px;
+		margin: 0 auto;
+		>div{
+			float: left;
+			margin: 20px;
+			opacity: 0.7;
+		}
+	}
+	.header{
+		padding-left: 50px;
+		font-family: "caoshu";
+		color: #fff;
+		h2{
+			font-size: 40px;
+		}
+		p{
+			font-size: 30px;
+			padding-left: 50px;
+		}
+	}
+	.main{
+		width: 1550px;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		position: relative;
+		padding-bottom:20px;
+		color: #fff; 
+		li{
+			float: left;
+			width: 250px;
+			margin-left:50px; 
+			position: relative;
+			.time{
+				width: 60px;
+				height: 40px;
+				transform:rotate(-45deg);
+				p{
+					text-align: center;
+				}
+			}
+			>p{
+				position: absolute;
+				top: 133px;
+				left: 30px;
+				width: 20px;
+				height: 20px;
+				background: #afdcf8;
+				border-radius: 50%;
+			}
+			>p:before{
+				display: block;
+				content: '';
+				margin: 2px;
+				width: 16px;
+				height: 16px;
+				background: #46a4da;
+				border-radius: 50%;
+			}
+			.descrition{
+				width: 200px;
+				height: 100px;
+				margin-bottom: 60px;
+				position: relative;
+				margin-left: 55px;
+				p{
+					width: 0px;
+					height: 0px;
+					border: 20px solid transparent;
+					border-top: 20px solid #afdcf8;
+					transform:skew(120deg);
+					position: absolute;
+					bottom: -50px;
+					left:-30px;
+				}
+				.maindes{
+					width: 100%;
+    				height: 100%;
+    				padding: 5px;
+    				border-radius: 5px;
+					background: #46a4da;
+					opacity: 0.9;
+				}
+			}
+		}
+	}
+	.main:before{
+		display: block;
+		position: absolute;
+		left: 0;
+		top:140px;
+		content: '';
+		height: 5px;
+		width: 100%;
+		background: #afdcf8;
+	}
+}
+.appear {
+  transform:translate(100%);
+}
+
+.appear-active {
+  transform:translate(0px);
+  transition:transform .5s ease-in .5s;
+}
+.enter {
+  transform:translate(100%);
+}
+
+.enter-active {
+   transform:translate(0px);
+  transition:transform 1s;
+}
+
+.leave {
+  transform:translate(0px);
+  opacity: 1;
+}
+
+.leave-active {
+  transform:translate(0,100%);
+  opacity:0.01;
+  transition:all 1s;
+}
+
